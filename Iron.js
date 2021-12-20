@@ -6,22 +6,22 @@ class Iron{
             'friction':3,
             'density':30
 		}
-        this.body = Bodies.rectangle(this.x,this.y,this.width,this.height, options);
+        this.body = Bodies.rectangle(x,y,30,60, options);
 		this.width = 30;
         this.height = 60;
-        this.x=x;
-        this.y=y;
+      
 		World.add(world, this.body);
 	}
     display()
 	{
 	
+			var ironpos=this.body.position;		
 			push()
 
 			rectMode(CENTER)
 			//strokeWeight(4);
 			fill("brown")
-            rect(this.x, this.y, this.width, this.height);
+            rect(ironpos.x, ironpos.y, this.width, this.height);
 			pop()
 			
 	}

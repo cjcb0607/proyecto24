@@ -9,20 +9,17 @@ class Stone{
         this.body = Bodies.rectangle(x, y, 50, 50, options);
 		this.width = 50;
         this.height = 50;
-        this.x=x;
-        this.y=y;
 		World.add(world, this.body);
 	}
 
     display()
 	{
-	
+			var stonepos=this.body.position;		
 			push()
-
 			rectMode(CENTER)
 			//strokeWeight(4);
 			fill("grey")
-            rect(this.x,this.y, this.width, this.height);
+            rect(stonepos.x,stonepos.y, this.width, this.height);
 			pop()
 			
 	}
